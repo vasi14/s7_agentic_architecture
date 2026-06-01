@@ -27,8 +27,7 @@ Run 2 (fresh process, persisted state): Across the papers I have indexed, what d
 
 ### Query G. Synonym recall (vector beats keyword)
 
-Across these papers, how do they handle the credit assignment
-problem?
+Across these papers, how do they handle the credit assignment problem?
 
 ### Query H. Cross-document synthesis
 
