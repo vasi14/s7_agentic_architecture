@@ -1,0 +1,44 @@
+You: Index the file papers/attention.md and tell me what the three key contributions of the Transformer architecture are according to this paper.
+
+══════════════════════════════════════════════════════════════════════════════
+run a43deb40  ─  query: Index the file papers/attention.md and tell me what the three key contributions of the Transformer architecture are according to this paper.
+══════════════════════════════════════════════════════════════════════════════
+[mcp] loaded 11 tools: ['web_search', 'fetch_url', 'get_time', 'currency_convert', 'read_file', 'list_dir', 'create_file', 'update_file', 'edit_file', 'index_document', 'search_knowledge']
+
+─── iter 1 ─────────────────────────────────────────────
+[memory.read]   1 hits
+[perception]    ○ g:de836855 — Make the contents of papers/attention.md searchable
+[perception]    ○ g:4f4369a3 — Identify and list the three key contributions of the Transformer architecture from the indexed file
+[decision]      TOOL_CALL: index_document({"path": "papers/attention.md"})
+[action]        → {   "path": "papers/attention.md",   "source": "sandbox:papers/attention.md",   "chunks_indexed": 3,   "chunk_size": 400,   "overlap": 80 }
+
+─── iter 2 ─────────────────────────────────────────────
+[memory.read]   5 hits
+[perception]    ✓ g:de836855 — Make the contents of papers/attention.md searchable
+[perception]    ○ g:4f4369a3 — Identify and list the three key contributions of the Transformer architecture from the indexed file
+[decision]      TOOL_CALL: read_file({"path": "papers/attention.md"})
+[action]        → [artifact art:53676fe2e4c3b567, 10774 bytes] preview: {   "path": "papers/attention.md",   "size_bytes": 10492,   "content": "[Skip to main content](https://arxiv.org/abs/1706.03762#content)\n[![Corne...   +art:53676fe2e4c3b567
+
+─── iter 3 ─────────────────────────────────────────────
+[memory.read]   6 hits
+[perception]    ✓ g:de836855 — Make the contents of papers/attention.md searchable
+[perception]    ○ g:4f4369a3 — Identify and list the three key contributions of the Transformer architecture from the indexed file  attach=art:53676fe2e4c3b567
+[attach]        art:53676fe2e4c3b567 (10774 bytes)
+[decision]      ANSWER: Based on the abstract of the paper "Attention Is All You Need," the three key contributions of the Transformer architecture are:
+
+1.  **Reliance on Attention Mechanisms:** The Transformer is based sol...
+
+─── iter 4 ─────────────────────────────────────────────
+[memory.read]   6 hits
+[perception]    ✓ g:de836855 — Make the contents of papers/attention.md searchable
+[perception]    ✓ g:4f4369a3 — Identify and list the three key contributions of the Transformer architecture from the indexed file
+
+[done] all 2 goals satisfied
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: Based on the abstract of the paper "Attention Is All You Need," the three key contributions of the Transformer architecture are:
+
+1.  **Reliance on Attention Mechanisms:** The Transformer is based solely on attention mechanisms, which allows it to dispense with recurrence and convolutions entirely.
+2.  **Improved Parallelization:** By removing recurrent and convolutional layers, the model is significantly more parallelizable during training.
+3.  **Efficiency and Performance:** The architecture requires significantly less time to train compared to previous models while achieving superior quality, as demonstrated by state-of-the-art results on machine translation tasks.
+══════════════════════════════════════════════════════════════════════════════

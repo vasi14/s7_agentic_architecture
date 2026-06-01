@@ -32,7 +32,7 @@ __MACOSX/
 coverage.*
 
 # Logs
-*.log
+#*.log
 
 # Databases
 *.db

@@ -1,0 +1,37 @@
+You: According to the indexed papers, what strategies allow smaller parameter models to outperform much larger ones?
+
+══════════════════════════════════════════════════════════════════════════════
+run 30015025  ─  query: According to the indexed papers, what strategies allow smaller parameter models to outperform much larger ones?
+══════════════════════════════════════════════════════════════════════════════
+[mcp] loaded 11 tools: ['web_search', 'fetch_url', 'get_time', 'currency_convert', 'read_file', 'list_dir', 'create_file', 'update_file', 'edit_file', 'index_document', 'search_knowledge']
+
+─── iter 1 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ○ g:fb17ff15 — Query the existing knowledge base for strategies allowing smaller models to outperform larger ones
+[perception]    ○ g:fcabe5a1 — Synthesise an answer describing these strategies
+[decision]      TOOL_CALL: search_knowledge({"query": "strategies for smaller models to outperform larger models"})
+[action]        → {   "id": "mem:451a5775",   "descriptor": "Strategies for small parameter models outperforming large models in indexed papers",   "source": "user_query",   "chunk_preview": "",   "metadata": {     "ra...
+
+─── iter 2 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:fb17ff15 — Query the existing knowledge base for strategies allowing smaller models to outperform larger ones
+[perception]    ○ g:fcabe5a1 — Synthesise an answer describing these strategies
+[decision]      ANSWER: Based on the indexed research, smaller parameter models can achieve performance competitive with or superior to much larger models through several key strategies and methodological improvements:
+
+*   ...
+
+─── iter 3 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:fb17ff15 — Query the existing knowledge base for strategies allowing smaller models to outperform larger ones
+[perception]    ✓ g:fcabe5a1 — Synthesise an answer describing these strategies
+
+[done] all 2 goals satisfied
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: Based on the indexed research, smaller parameter models can achieve performance competitive with or superior to much larger models through several key strategies and methodological improvements:
+
+*   **Efficient Alignment Methods:** Techniques like Direct Preference Optimization (DPO) allow models to align with human preferences more effectively than traditional Reinforcement Learning from Human Feedback (RLHF). DPO is computationally lightweight, stable, and eliminates the need for complex sampling or extensive hyperparameter tuning, often matching or exceeding the performance of larger models in tasks like summarization and dialogue control.
+*   **Sparsity:** Research indicates that while performance generally scales with model size, incorporating sparsity can provide significant benefits, allowing smaller models to punch above their weight class by optimizing parameter usage.
+*   **Advanced Evaluation Metrics:** The use of more efficient and accurate evaluation frameworks, such as WB-Score (WildBench), allows for better optimization and selection of models. By providing a cost-efficient way to evaluate quality that correlates highly with human-voted Elo ratings, researchers can more effectively iterate on smaller models to reach high performance levels without needing the massive scale typically associated with "breakthrough" behaviors.
+*   **Task-Specific Optimization:** Understanding that tasks requiring "breakthrough" behavior often involve multiple components or brittle metrics—as opposed to tasks that improve predictably with scale—allows developers to focus resources on architectural or training improvements for specific, complex capabilities rather than relying solely on increasing parameter count.
+══════════════════════════════════════════════════════════════════════════════

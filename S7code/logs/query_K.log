@@ -1,0 +1,41 @@
+You: Across the indexed papers, what are the different prompting strategies proposed to enhance reasoning capabilities in large language models, and how 
+do they differ in their approach?
+
+══════════════════════════════════════════════════════════════════════════════
+run feda5f4d  ─  query: Across the indexed papers, what are the different prompting strategies proposed to enhance reasoning capabilities in large language models, and how do they differ in their approach?
+══════════════════════════════════════════════════════════════════════════════
+[mcp] loaded 11 tools: ['web_search', 'fetch_url', 'get_time', 'currency_convert', 'read_file', 'list_dir', 'create_file', 'update_file', 'edit_file', 'index_document', 'search_knowledge']
+
+─── iter 1 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ○ g:e1f74f9b — Query the existing knowledge base for various prompting strategies aimed at enhancing LLM reasoning.
+[perception]    ○ g:4bf08799 — Synthesise an answer regarding the different prompting strategies found and their unique approaches to reasoning.
+[decision]      TOOL_CALL: search_knowledge({"query": "prompting strategies to enhance LLM reasoning"})
+[action]        → {   "id": "mem:e46e6f38",   "descriptor": "[sandbox:my-papers/chain-of-thought-prompting.md chunk 1/3] [Skip to main content](https://arxiv.org/abs/2201.11903#content) [![Cornell University](https://a...
+
+─── iter 2 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:e1f74f9b — Query the existing knowledge base for various prompting strategies aimed at enhancing LLM reasoning.
+[perception]    ○ g:4bf08799 — Synthesise an answer regarding the different prompting strategies found and their unique approaches to reasoning.
+[decision]      ANSWER: Based on the available research, prompting strategies are critical for unlocking advanced reasoning capabilities in language models, particularly for tasks that require multi-step logic.
+
+The primary ...
+
+─── iter 3 ─────────────────────────────────────────────
+[memory.read]   8 hits
+[perception]    ✓ g:e1f74f9b — Query the existing knowledge base for various prompting strategies aimed at enhancing LLM reasoning.
+[perception]    ✓ g:4bf08799 — Synthesise an answer regarding the different prompting strategies found and their unique approaches to reasoning.
+
+[done] all 2 goals satisfied
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: Based on the available research, prompting strategies are critical for unlocking advanced reasoning capabilities in language models, particularly for tasks that require multi-step logic.
+
+The primary strategies identified include:
+
+*   **Chain-of-Thought (CoT) Prompting:** This approach encourages models to generate intermediate reasoning steps before arriving at a final answer. By breaking down complex problems into a sequence of logical steps, CoT significantly improves performance on tasks that otherwise show flat scaling curves, allowing models to demonstrate emergent capabilities that standard few-shot prompting often underestimates.
+*   **Standard Few-Shot Prompting:** While useful for many tasks, this method often fails on complex benchmarks (such as BIG-Bench Hard) because it lacks the explicit requirement for intermediate reasoning. Research indicates that relying solely on standard few-shot prompting can substantially underestimate a model's true potential.
+*   **Interactive/Agentic Reasoning (e.g., ReAct):** Building upon the concept of intermediate reasoning, these strategies often integrate external tools (such as APIs) into the reasoning loop. This allows the model to not only "think" through a problem but also to verify its reasoning against external data sources, bridging the gap between internal logic and factual accuracy.
+
+In summary, the shift from simple input-output prompting to strategies that mandate explicit, multi-step reasoning (CoT) or external verification (ReAct) is essential for enabling models to handle complex, multi-step tasks effectively.
+══════════════════════════════════════════════════════════════════════════════
