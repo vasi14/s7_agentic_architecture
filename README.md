@@ -39,7 +39,6 @@ The [S7code/results](S7code/results) folder contains execution logs for each que
 
 ## Additional Notes
 
-- [S7code/results.md](S7code/results.md) is a separate transcript-style summary of several manual runs.
 - [S7code/helper/indexing_results.md](S7code/helper/indexing_results.md) captures extra indexing experiments over the larger `my-papers/` collection.
 
 ## My-Papers Corpus
